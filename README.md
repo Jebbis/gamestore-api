@@ -33,7 +33,7 @@
 - Error handling
 
 
-## Screenshots
+## Endpoint examples
 Get All games
 
 `GET http://localhost:5029/games`
@@ -63,6 +63,7 @@ Transfer-Encoding: chunked
   }
 ]
 ```
+Get game by Id
 
 `GET http://localhost:5029/games/1`
 
@@ -81,6 +82,68 @@ Transfer-Encoding: chunked
   "price": 9.99,
   "releaseDate": "2011-11-18"
 }
+```
+Create new game
+
+```
+POST http://localhost:5029/games
+Content-Type: application/json
+
+{
+    "name": "League of Legends",
+    "genreId": 3,
+    "price": 19.99,
+    "releaseDate": "2011-11-18"
+}
+```
+
+```
+HTTP/1.1 201 Created
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sun, 03 Nov 2024 09:19:50 GMT
+Server: Kestrel
+Location: http://localhost:5029/games/3
+Transfer-Encoding: chunked
+
+{
+  "id": 3,
+  "name": "League of Legends",
+  "genreId": 3,
+  "price": 19.99,
+  "releaseDate": "2011-11-18"
+}
+```
+Update a game
+
+```
+PUT http://localhost:5029/games/1
+Content-Type: application/json
+
+{
+  "name": "Age of Empire",
+  "genreId": 1,
+  "price": 9.99,
+  "releaseDate": "2011-11-18"
+}
+```
+
+```
+HTTP/1.1 204 No Content
+Connection: close
+Date: Sun, 03 Nov 2024 09:20:16 GMT
+Server: Kestrel
+```
+
+###Delete a game by Id
+
+`DELETE http://localhost:5029/games/3`
+
+```
+HTTP/1.1 204 No Content
+Connection: close
+Date: Sun, 03 Nov 2024 09:22:42 GMT
+Server: Kestrel
 ```
 
 
