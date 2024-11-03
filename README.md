@@ -117,9 +117,10 @@ Transfer-Encoding: chunked
 ```
 
 ### **Update a game**
+`PUT http://localhost:5029/games/1`
 
 ```
-PUT http://localhost:5029/games/1
+//Payload
 Content-Type: application/json
 
 {
