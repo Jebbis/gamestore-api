@@ -116,7 +116,7 @@ Transfer-Encoding: chunked
 }
 ```
 
-**Update a game**
+### **Update a game**
 
 ```
 PUT http://localhost:5029/games/1
