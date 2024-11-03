@@ -84,9 +84,10 @@ Transfer-Encoding: chunked
 }
 ```
 Create new game
+`POST http://localhost:5029/games`
 
 ```
-POST http://localhost:5029/games
+//Payload
 Content-Type: application/json
 
 {
@@ -96,7 +97,7 @@ Content-Type: application/json
     "releaseDate": "2011-11-18"
 }
 ```
-
+Return:
 ```
 HTTP/1.1 201 Created
 Connection: close
@@ -114,6 +115,7 @@ Transfer-Encoding: chunked
   "releaseDate": "2011-11-18"
 }
 ```
+
 Update a game
 
 ```
@@ -135,7 +137,7 @@ Date: Sun, 03 Nov 2024 09:20:16 GMT
 Server: Kestrel
 ```
 
-###Delete a game by Id
+Delete a game by Id
 
 `DELETE http://localhost:5029/games/3`
 
