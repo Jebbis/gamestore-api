@@ -34,10 +34,10 @@
 
 
 ## Endpoint examples
-Get All games
+### **Get All games**
 
 `GET http://localhost:5029/games`
-
+Return:
 ```
 HTTP/1.1 200 OK
 Connection: close
@@ -63,10 +63,10 @@ Transfer-Encoding: chunked
   }
 ]
 ```
-Get game by Id
+### **Get game by Id**
 
 `GET http://localhost:5029/games/1`
-
+Return:
 ```
 HTTP/1.1 200 OK
 Connection: close
@@ -83,7 +83,7 @@ Transfer-Encoding: chunked
   "releaseDate": "2011-11-18"
 }
 ```
-Create new game
+### **Create new game**
 `POST http://localhost:5029/games`
 
 ```
@@ -129,7 +129,7 @@ Content-Type: application/json
   "releaseDate": "2011-11-18"
 }
 ```
-
+Return:
 ```
 HTTP/1.1 204 No Content
 Connection: close
@@ -137,9 +137,10 @@ Date: Sun, 03 Nov 2024 09:20:16 GMT
 Server: Kestrel
 ```
 
-Delete a game by Id
+### **Delete a game by Id**
 
 `DELETE http://localhost:5029/games/3`
+Return:
 
 ```
 HTTP/1.1 204 No Content
