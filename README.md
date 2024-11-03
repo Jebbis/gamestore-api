@@ -35,25 +35,53 @@
 
 ## Screenshots
 Get All games
+
 `GET http://localhost:5029/games`
-Returns
+
 ```
 HTTP/1.1 200 OK
 Connection: close
 Content-Type: application/json; charset=utf-8
-Date: Sun, 03 Nov 2024 09:01:18 GMT
+Date: Sun, 03 Nov 2024 09:18:08 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Age of Empire",
+    "genre": "Fighting",
+    "price": 9.99,
+    "releaseDate": "2011-11-18"
+  },
+  {
+    "id": 2,
+    "name": "World of warcraft",
+    "genre": "Sports",
+    "price": 19.99,
+    "releaseDate": "2011-11-18"
+  }
+]
+```
+
+`GET http://localhost:5029/games/1`
+
+```
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sun, 03 Nov 2024 09:18:31 GMT
 Server: Kestrel
 Transfer-Encoding: chunked
 
 {
   "id": 1,
-  "name": "Minecraft V21111",
+  "name": "Age of Empire",
   "genreId": 1,
   "price": 9.99,
   "releaseDate": "2011-11-18"
 }
 ```
-
 
 
 ## Setup
