@@ -1,6 +1,7 @@
 # GameStore API
 > This project is a API for a Gamestore thats purpose is to manage and retrieve information about games in the stores catalog
 > The API uses CRUD operations for managing the records and using the Entity Framework for database interactions.
+> 
 > The code might have some unnecessary/unclear comments but this was a learning project for me and that helped me to understand the concepts and for futher reference
 
 
